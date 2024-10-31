@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm UCLN</title>
+</head>
+<body>
+    <h1>Tìm UCLN của 2 số</h1>
+    <input type="number" id="a" placeholder="Nhập a">
+    <input type="number" id="b" placeholder="Nhập b">
+    <button onclick="timUCLN()">Tìm UCLN</button>
+    <p id="ketQua"></p>
+
+    <script>
+        function timUCLN() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            
+            function UCLN(a, b) {
+                while (b != 0) {
+                    let temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                return a;
+            }
+
+            document.getElementById("ketQua").innerText = "UCLN của " + a + " và " + b + " là: " + UCLN(a, b);
+        }
+    </script>
+</body>
+</html>

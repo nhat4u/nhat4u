@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số lẻ từ 1 đến n</title>
+</head>
+<body>
+    <h1>Tính tổng các số lẻ từ 1 đến a</h1>
+    <input type="number" id="a" placeholder="Nhập a">
+    <button onclick="tinhTongLe()">Tính tổng lẻ</button>
+    <p id="ketQua"></p>
+
+    <script>
+        function tinhTongLe() {
+            let a = document.getElementById("a").value;
+            let tong = 0;
+            for (let i = 1; i <= a; i += 2) {
+                tong += i;
+            }
+            document.getElementById("ketQua").innerText = "Tổng các số lẻ từ 1 đến " + a + " là: " + tong;
+        }
+    </script>
+</body>
+<hr>
+
+<body>
+    <h1>Kiểm tra số nguyên tố</h1>
+    <input type="number" id="q" placeholder="Nhập q">
+    <button onclick="kiemTraSoNguyenTo()">Kiểm tra</button>
+    <p id="ketQua"></p>
+
+    <script>
+        function kiemTraSoNguyenTo() {
+            let q = document.getElementById("q").value;
+            let isPrime = true;
+            if (q <= 1) {
+                isPrime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(q); i++) {
+                    if (q % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            document.getElementById("ketQua").innerText = q + (isPrime ? " là số nguyên tố" : " không phải là số nguyên tố");
+        }
+    </script>
+</body>
+</html>

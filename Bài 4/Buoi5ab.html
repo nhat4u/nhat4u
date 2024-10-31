@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng từ 1 đến n</title>
+</head>
+<body>
+    <h1>Tính tổng từ 1 đến n</h1>
+    <input type="number" id="n" placeholder="Nhập n">
+    <button onclick="tinhTong()">Tính tổng</button>
+    <p id="ketQua"></p>
+
+    <script>
+        function tinhTong() {
+            let n = document.getElementById("n").value;
+            let tong = 0;
+            for (let i = 1; i <= n; i++) {
+                tong += i;
+            }
+            document.getElementById("ketQua").innerText = "Tổng từ 1 đến " + n + " là: " + tong;
+        }
+    </script>
+</body>
+<hr>
+
+<body>
+    <h1>Tính tổng các số chẵn từ 1 đến m</h1>
+    <input type="number" id="m" placeholder="Nhập m">
+    <button onclick="tinhTongChan()">Tính tổng chẵn</button>
+    <p id="ketQua"></p>
+
+    <script>
+        function tinhTongChan() {
+            let m = document.getElementById("m").value;
+            let tong = 0;
+            for (let i = 2; i <= m; i += 2) {
+                tong += i;
+            }
+            document.getElementById("ketQua").innerText = "Tổng các số chẵn từ 1 đến " + m + " là: " + tong;
+        }
+    </script>
+</body>
+<hr>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép toán cơ bản</title>
+</head>
+<body>
+  <h1>Phép toán cơ bản</h1>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Nhập số a:</td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td>Nhập số b:</td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculate()">Tính</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function calculate() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            
+            if (!isNaN(a) && !isNaN(b)) {
+                var tong = a + b;
+                var hieu = a - b;
+                var tich = a * b;
+                var thuong = b != 0 ? (a / b) : "Không thể chia cho 0";
+                
+                document.getElementById("result").innerHTML = 
+                    "Tổng: " + tong + "<br>" +
+                    "Hiệu: " + hieu + "<br>" +
+                    "Tích: " + tich + "<br>" +
+                    "Thương: " + thuong;
+            } else {
+                document.getElementById("result").innerHTML = "Vui lòng nhập cả hai số!";
+            }
+        }
+    </script>
+        <p id="result"></p>
+
+     <h2>Giải phương trình bậc nhất ax + b = 0</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Nhập hệ số a:</td>
+            <td><input type="number" id="a_pt"></td>
+        </tr>
+        <tr>
+            <td>Nhập hệ số b:</td>
+            <td><input type="number" id="b_pt"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="solveEquation()">Giải</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result"></p>
+
+    <script>
+        function solveEquation() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            
+            if (!isNaN(a) && !isNaN(b)) {
+                if (a != 0) {
+                    var x = -b / a;
+                    document.getElementById("result").innerHTML = "Nghiệm của phương trình là: x = " + x;
+                } else if (b == 0) {
+                    document.getElementById("result").innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "Vui lòng nhập hệ số a và b!";
+            }
+        }
+    </script>
+
+    <h2>Tính số ngày của một tháng</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Nhập tháng:</td>
+            <td><input type="number" id="month"></td>
+        </tr>
+        <tr>
+            <td>Nhập năm:</td>
+            <td><input type="number" id="year"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculateDays()">Tính số ngày</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateDays() {
+            var month = parseInt(document.getElementById("month").value);
+            var year = parseInt(document.getElementById("year").value);
+            
+            if (month >= 1 && month <= 12 && year > 0) {
+                var days;
+                if (month == 2) {
+                    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                        days = 29; // Năm nhuận
+                    } else {
+                        days = 28;
+                    }
+                } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                    days = 30;
+                } else {
+                    days = 31;
+                }
+                
+                document.getElementById("result").innerHTML = "Số ngày của tháng " + month + " là: " + days;
+            } else {
+                document.getElementById("result").innerHTML = "Vui lòng nhập tháng từ 1 đến 12 và năm hợp lệ!";
+            }
+        }
+    </script>
+        <p id="result"></p>
+</body>
+</html>

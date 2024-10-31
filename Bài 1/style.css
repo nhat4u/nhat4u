@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('anhnenn.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    filter: contrast(1.2);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.header {
+    text-align: center;
+    background-color: #e0b5b5;
+    padding: 20px;
+    width: 100%;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.family-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.family-table a {
+    color: red;
+
+}
+
+.family-table th, .family-table td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.family-photo {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #e0b5b5;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}

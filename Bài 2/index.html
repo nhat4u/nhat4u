@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài HTML và CSS</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            /* text-align: center; */
+        }
+        h1 {
+            font-size: 18pt;
+        }
+        p {
+            font-size: 14pt;
+        }
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            table-layout: fixed; 
+        }
+        table, th, td {
+            border: 2px solid black;
+        }
+        img {
+            height: 200px;
+            width: auto;
+        }
+        td {
+            vertical-align: top;
+            padding: 10px;
+            overflow: hidden; 
+        }
+
+        .row-2 td:nth-child(1) {
+            width: 70%;
+        }
+        .row-2 td:nth-child(2) {
+            width: 30%;
+        }
+        .row-3 td:nth-child(1) {
+            width: 30%;
+        }
+        .row-3 td:nth-child(2) {
+            width: 70%;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="2">
+                <img src="Anh1.jpg" alt="Anh 1">
+            </td>
+        </tr>
+
+        <tr class="row-2">
+            <td>
+                <h1>1. Trồng thành bằng xơ dừa</h1>
+                <p>Chọn xơ của những quả dừa già và khô rồi xé ra từng mảnh to băng nửa bàn tay. Sắp các mảnh sát nhau thành băng đài trên giàn gỗ hoặc tre và giữ chặt chúng lại bằng 2 thanh nẹp tre.</p>
+            </td>
+            <td>
+                <img src="Anh2.jpg" alt="Anh 2">
+            </td>
+        </tr>
+
+        <tr class="row-3">
+            <td>
+                <img src="Anh3.jpg" alt="Anh 3">
+            </td>
+            <td>
+                <h1>2. Một số điểm cần lưu ý</h1>
+                <p>Khi trồng xong nên để cây ở nơi mát mẻ có độ ẩm cao cho đến khi rễ non phát triển mới chuyển dần ra nơi có ánh sáng phù hợp. Sau khi trồng 1-2 ngày không cần tưới nước ngay vì dễ bị thối cây. Phải thường xuyên quan sát xem đất còn đủ độ ẩm hay đã khô. Cần tưới nước dưới đạng phun sương.</p>
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-align: center;"><a href="http://www.hnmu.edu.vn">Xem thêm...</a></p>
+
+</body>
+</html>

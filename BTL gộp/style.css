@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('Ảnh/anhnen.jpg'); 
+    background-size: cover; /* Change this to cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.clock-container, .countdown-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+.countdown-container {
+    top: 60px;
+}
+
+.profile-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    width: 320px;
+    margin: 50px auto;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+h1 {
+    font-size: 24px;
+}
+p {
+    font-size: 18px;
+}
+.music-text {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.music-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.link-section {
+    text-align: center;
+    margin-top: 20px;
+}
+.link-section a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.link-section a:hover {
+    background-color: white;
+    color: black;
+}
+
+#snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    top: -50px;
+    font-size: 40px; 
+    opacity: 0.8;
+    color: white;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.comment-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+}
+
+.comment-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#comment-box {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+.toggle-theme, .toggle-background {
+    position: fixed;
+    padding: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+.toggle-theme {
+    top: 20px;
+    right: 20px;
+}
+.toggle-background {
+    top: 60px;
+    right: 20px;
+}
+.toggle-theme:hover, .toggle-background:hover {
+    background-color: whit  e;
+    color: black;
+}
+
+.dark-mode .link-section a {
+    color: white;
+    border-color: white;
+}
+.dark-mode .link-section a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Section background colors */
+.profile-container {
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.comment-section {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .link-section {
+background-color: rgba(0, 0, 0, 0.6);
+} */
+
+/* Dark mode styles */
+.dark-mode .profile-container {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .comment-section {
+background-color: rgba(0, 0, 0, 0.7);
+}
+.dark-mode .clock-container,
+.dark-mode .countdown-container {
+background-color: rgba(30, 30, 30, 0.8); /* Màu nền cho chế độ tối */
+color: white; /* Màu chữ */
+}
+
+
+/* .dark-mode .link-section {
+background-color: rgba(0, 0, 0, 0.8);
+} */

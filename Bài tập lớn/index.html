@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+</head>
+<body>  
+    <div class="profile"> </div>
+    <!-- Đồng hồ thời gian thực -->
+    <div class="clock-container" id="clock">00:00:00</div>
+    <!-- Đồng hồ đếm ngược sinh nhật sắp tới -->
+    <div class="countdown-container" id="countdown">Sinh nhật sắp tới: 00d 00h 00m 00s</div>
+
+    <button class="toggle-theme" id="toggleTheme">Chế độ tối</button>
+    <button class="toggle-background" id="toggleBackground">Đổi hình nền</button>
+
+    <div class="profile-container">
+        <img src="Ảnh/anh1.jpg" alt="Ảnh cá nhân" class="profile-img">
+        <h1>Dương Minh Nhật</h1>
+        <p>Sinh Ngày 03/07/2005</p>
+        <p>Tuổi: 19</p>
+        <p>Sống tại: Bắc Từ Liêm, Hà Nội</p>
+        <p>Sinh viên tại HNMU</p>
+        <p>Khoa: CNTT, Lớp D2023A</p>
+        <p>Sở thích: Chơi thể thao, chơi game và đi du lịch</p>
+    </div>
+
+    <p class="music-text">Bản nhạc này là bản nhạc tôi yêu thích</p>
+    <div class="music-container">
+        <audio controls>
+            <source src="Music/LoveIs-Dangrangto.mp3" type="audio/mpeg"> 
+            Trình duyệt của bạn không hỗ trợ trình phát nhạc.
+        </audio>
+    </div>
+
+    <div class="link-section">
+        <a href="https://www.facebook.com/profile.php?id=100066993326907" target="_blank">Giới thiệu về tôi</a>
+    </div>
+    <div id="snowflakes-container"></div>
+    <div class="comment-section">
+        <h2>Bình luận</h2>
+        <textarea id="comment-box" placeholder="Nhập bình luận của bạn..." rows="4"></textarea>
+        <button onclick="submitComment()">Gửi</button>
+    </div>  
+</body>
+</html>
